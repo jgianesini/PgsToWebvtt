@@ -21,6 +21,6 @@ func Convert(file string) {
 	err = subFile.Run()
 	check(err)
 
-	err = subFile.Save(strings.Replace(file, ".sup", ".webvtt", -1))
+	err = subFile.Save(strings.Replace(file, ".sup", ".vtt", -1))
 	check(err)
 }

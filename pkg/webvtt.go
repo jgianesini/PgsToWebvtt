@@ -48,6 +48,8 @@ func (file *Webvtt) Write() {
 	for _, k := range keys {
 		lines = append(lines, file.Lines[k])
 	}
+	_, err = f.WriteString("WEBVTT \n\n")
+	check(err)
 	for _, line := range lines {
 		t := strconv.Itoa(line.LineNumber)
 		_, err := f.WriteString(t + "\n")
